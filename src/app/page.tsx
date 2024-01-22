@@ -5,6 +5,7 @@ import Client from '@/app/components/Client';
 import ClientWithServerData from '@/app/components/ClientWithServerData';
 import { Suspense } from 'react';
 import Navigation from '@/app/components/Navigation';
+import WorldTimeApi from '@/app/components/WorldTimeApi';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Client label="Client" />
         <ClientWithServerData label="Client with server data" />
         <Async label="Async" />
+        <WorldTimeApi label="World Time API" />
       </Suspense>
     </main>
   );
