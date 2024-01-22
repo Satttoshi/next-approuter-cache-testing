@@ -16,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <h1 className="m-8 text-4xl">{process.env.NEXT_PUBLIC_APP_MODE}</h1>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -16,7 +16,7 @@ export default function Clock({ label }: { label: string }) {
   }, []);
 
   return (
-    <div className="m-8">
+    <div className="ml-8 text text-yellow-400">
       <label>{label}</label>
       <p className="text-3xl">{time}</p>
     </div>
