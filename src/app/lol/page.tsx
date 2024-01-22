@@ -5,11 +5,13 @@ import Client from '@/app/components/Client';
 import ClientWithServerData from '@/app/components/ClientWithServerData';
 import Async from '@/app/components/Async';
 import Dynamic from '@/app/components/Dynamic';
+import Navigation from '@/app/components/Navigation';
 
 export default function Lol() {
   return (
     <main>
       <Suspense>
+        <Navigation />
         <Clock label="Clock" />
         <Basic label="Basic" />
         <Client label="Client" />
