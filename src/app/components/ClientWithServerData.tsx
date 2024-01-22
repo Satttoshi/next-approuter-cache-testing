@@ -1,6 +1,6 @@
 'use client';
 
-import { currentTimeWithoutDateInIsoWithDelay } from '@/app/lib/utils';
+import { currentTimeWithDelay } from '@/app/lib/utils';
 import { useEffect, useState } from 'react';
 
 export default function ClientWithServerData({ label }: { label: string }) {
@@ -8,7 +8,7 @@ export default function ClientWithServerData({ label }: { label: string }) {
 
   useEffect(() => {
     async function fetchData() {
-      const time = await currentTimeWithoutDateInIsoWithDelay();
+      const time = await currentTimeWithDelay();
       setTime(time);
     }
 

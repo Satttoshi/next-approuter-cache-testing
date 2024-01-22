@@ -1,12 +1,12 @@
-import Basic from '@/app/components/Basic';
+import { Suspense } from 'react';
 import Clock from '@/app/components/Clock';
-import Async from '@/app/components/Async';
+import Basic from '@/app/components/Basic';
 import Client from '@/app/components/Client';
 import ClientWithServerData from '@/app/components/ClientWithServerData';
+import Async from '@/app/components/Async';
 import Dynamic from '@/app/components/Dynamic';
-import { Suspense } from 'react';
 
-export default function Home() {
+export default function Lol() {
   return (
     <main>
       <Suspense>
@@ -15,6 +15,7 @@ export default function Home() {
         <Client label="Client" />
         <ClientWithServerData label="Client with server data" />
         <Async label="Async" />
+        <Dynamic label="Dynamic" />
       </Suspense>
     </main>
   );

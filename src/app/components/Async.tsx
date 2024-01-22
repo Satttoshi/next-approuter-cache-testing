@@ -1,7 +1,7 @@
-import { currentTimeWithoutDateInIsoWithDelay } from '@/app/lib/utils';
+import { currentTimeWithDelay } from '@/app/lib/utils';
 
 export default async function Async({ label }: { label: string }) {
-  const time = await currentTimeWithoutDateInIsoWithDelay();
+  const time = await currentTimeWithDelay();
 
   return (
     <div className="m-8">

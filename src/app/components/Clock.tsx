@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { currentTimeWithoutDateInIso } from '@/app/lib/utils';
+import { currentTime } from '@/app/lib/utils';
 
 // Client Rendered Component
 export default function Clock({ label }: { label: string }) {
-  const [time, setTime] = useState<string>(currentTimeWithoutDateInIso());
+  const [time, setTime] = useState<string>(currentTime());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(currentTimeWithoutDateInIso());
+      setTime(currentTime());
     }, 1000);
 
     return () => clearInterval(interval);
