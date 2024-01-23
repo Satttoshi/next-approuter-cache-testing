@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Clock from '@/app/components/Clock';
+import dynamic from 'next/dynamic';
 
 export default function Navigation() {
+  const Clock = dynamic(() => import('@/app/components/Clock'), {
+    ssr: false,
+  });
   return (
     <>
       <div className="flex mt-8">

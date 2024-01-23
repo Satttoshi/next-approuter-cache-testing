@@ -1,12 +1,15 @@
 import Basic from '@/app/components/Basic';
 import Async from '@/app/components/Async';
-import Client from '@/app/components/Client';
 import ClientWithServerData from '@/app/components/ClientWithServerData';
 import { Suspense } from 'react';
 import Navigation from '@/app/components/Navigation';
 import WorldTimeApi from '@/app/components/WorldTimeApi';
+import dynamic from 'next/dynamic';
 
 export default function Home() {
+  const Client = dynamic(() => import('@/app/components/Client'), {
+    ssr: false,
+  });
   return (
     <main>
       <Suspense>
