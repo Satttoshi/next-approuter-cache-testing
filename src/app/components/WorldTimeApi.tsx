@@ -3,7 +3,7 @@ export default async function WorldTimeApi({ label }: { label: string }) {
     'https://worldtimeapi.org/api/timezone/Europe/London',
     /*    { next: { revalidate: 5 } },*/
     /*{ cache: 'no-store' },*/
-    { next: { tags: ['testTag2'] } },
+    { next: { tags: ['test'] } },
   );
 
   const { datetime } = await worldTime.json();

@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import Navigation from '@/app/components/Navigation';
 import WorldTimeApi from '@/app/components/WorldTimeApi';
 import dynamic from 'next/dynamic';
+import CacheButton from '@/app/components/CacheButton';
 
 export default function Home() {
   const Client = dynamic(() => import('@/app/components/Client'), {
@@ -19,6 +20,7 @@ export default function Home() {
         <ClientWithServerData label="Client with server data" />
         <Async label="Async" />
         <WorldTimeApi label={'WorldTimeApi'} />
+        <CacheButton />
       </Suspense>
     </main>
   );
