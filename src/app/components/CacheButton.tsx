@@ -1,8 +1,10 @@
-export default async function CacheButton() {
+import { revalidateTag } from 'next/cache';
+
+export default async function CacheButton({ tag }: { tag?: string }) {
   async function action() {
     'use server';
     console.log('CacheButton action');
-    /*    revalidateTag('test');*/
+    revalidateTag(tag ?? '');
     /*    revalidatePath('/');*/
   }
 
@@ -12,7 +14,7 @@ export default async function CacheButton() {
         className="ml-8 bg-blue-800 hover:bg-blue-900 text-white font-semibold py-2 px-4 rounded"
         type="submit"
       >
-        Revalidate
+        Revalidate {tag && `tag: ${tag}`}
       </button>
     </form>
   );

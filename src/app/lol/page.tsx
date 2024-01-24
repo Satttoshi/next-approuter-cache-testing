@@ -1,18 +1,19 @@
 import { Suspense } from 'react';
-import Clock from '@/app/components/Clock';
 import Basic from '@/app/components/Basic';
-import Client from '@/app/components/Client';
 import ClientWithServerData from '@/app/components/ClientWithServerData';
 import Async from '@/app/components/Async';
 import Dynamic from '@/app/components/Dynamic';
 import Navigation from '@/app/components/Navigation';
+import dynamic from 'next/dynamic';
 
 export default function Lol() {
+  const Client = dynamic(() => import('@/app/components/Client'), {
+    ssr: false,
+  });
   return (
     <main>
       <Suspense>
         <Navigation />
-        <Clock label="Clock" />
         <Basic label="Basic" />
         <Client label="Client" />
         <ClientWithServerData label="Client with server data" />

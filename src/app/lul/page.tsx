@@ -1,21 +1,21 @@
 import { Suspense } from 'react';
-import Clock from '@/app/components/Clock';
-import Basic from '@/app/components/Basic';
-import Client from '@/app/components/Client';
-import ClientWithServerData from '@/app/components/ClientWithServerData';
-import Async from '@/app/components/Async';
 import Navigation from '@/app/components/Navigation';
+import WorldTimeApi from '@/app/components/WorldTimeApi';
+import WorldTimeApi2 from '@/app/components/WorldTimeApi2';
+import WorldTimeApi3 from '@/app/components/WorldTimeApi3';
+import WorldTimeApi4 from '@/app/components/WorldTimeApi4';
+import CacheButton from '@/app/components/CacheButton';
 
 export default function Lol() {
   return (
     <main>
       <Suspense>
         <Navigation />
-        <Clock label="Clock" />
-        <Basic label="Basic" />
-        <Client label="Client" />
-        <ClientWithServerData label="Client with server data" />
-        <Async label="Async" />
+        <WorldTimeApi label="WorldTimeApi tag 'test'" />
+        <WorldTimeApi2 label="WorldTimeApi 2 tag 'test2'" />
+        <WorldTimeApi3 label="Another TimeApi 1 'test3'" />
+        <WorldTimeApi4 label="TimeApi opt out cache" />
+        <CacheButton tag="test2" />
       </Suspense>
     </main>
   );

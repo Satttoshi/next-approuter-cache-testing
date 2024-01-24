@@ -19,8 +19,8 @@ export default function Home() {
         <Client label="Client" />
         <ClientWithServerData label="Client with server data" />
         <Async label="Async" />
-        <WorldTimeApi label={'WorldTimeApi'} />
-        <CacheButton />
+        <WorldTimeApi label="WorldTimeApi" />
+        <CacheButton tag="test" />
       </Suspense>
     </main>
   );

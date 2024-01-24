@@ -13,10 +13,10 @@ export default function Navigation() {
             Root
           </Link>
           <Link className="text-blue-500 hover:text-blue-700" href={'./lol'}>
-            No Store
+            Opt out of cache
           </Link>
           <Link className="text-blue-500 hover:text-blue-700" href={'./lul'}>
-            Normal
+            External Apis
           </Link>
         </div>
         <Clock label="Clock" />
