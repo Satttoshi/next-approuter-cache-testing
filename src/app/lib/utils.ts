@@ -1,4 +1,3 @@
-// client function
 export function currentTime() {
   const currentTime = new Date();
   const currentTimeInIso = currentTime.toISOString();

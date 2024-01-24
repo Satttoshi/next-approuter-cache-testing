@@ -2,5 +2,5 @@ POST localhost:3000/api/revalidate
 Content-Type: application/json
 
 {
-  "tag": "test"
+  "tag": "test3"
 }

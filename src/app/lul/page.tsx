@@ -15,7 +15,7 @@ export default function Lol() {
         <WorldTimeApi2 label="WorldTimeApi 2 tag 'test2'" />
         <WorldTimeApi3 label="Another TimeApi 1 'test3'" />
         <WorldTimeApi4 label="TimeApi opt out cache" />
-        <CacheButton tag="test2" />
+        <CacheButton />
       </Suspense>
     </main>
   );

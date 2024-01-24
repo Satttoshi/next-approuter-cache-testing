@@ -20,7 +20,7 @@ export default function Home() {
         <ClientWithServerData label="Client with server data" />
         <Async label="Async" />
         <WorldTimeApi label="WorldTimeApi" />
-        <CacheButton tag="test" />
+        <CacheButton />
       </Suspense>
     </main>
   );
